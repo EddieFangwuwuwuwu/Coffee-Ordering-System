@@ -78,6 +78,17 @@ header section #container2 .user-trigger {
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+header section #container2 .user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid lightgrey;
 }
 
 header section #container2 .user-dropdown {
@@ -1290,32 +1301,128 @@ header section #container1 nav ul #menu:hover #dropdown a {
   flex-direction: column;
 }
 
-#order-detail #order-detail-container{
-  width:90%;
+#order-detail #order-detail-container {
+  width: 90%;
   margin: 0 auto;
 }
-#order-detail .order-item-container{
+#order-detail .order-item-container {
   display: flex;
   align-items: center;
   border-bottom: 1px solid black;
-  gap:15px;
-  padding:10px 10px;
+  gap: 15px;
+  padding: 10px 10px;
 }
 
-#order-detail .order-item-container img{ 
+#order-detail .order-item-container img {
   width: 100px;
   height: auto;
   border: 1px solid lightgrey;
 }
 
-#order-detail .order-item-container .order-item-desc{ 
+#order-detail .order-item-container .order-item-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#order-detail .order-item-container .order-item-desc p {
+  margin: 0;
+}
+.flash {
+    max-width: 600px;
+    margin: 15px auto;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.flash-success {
+    background-color: #e6f4ea;
+    border: 1px solid #7fcf9a;
+    color: #1e7e34;
+}
+
+.flash-error {
+    background-color: #fdecea;
+    border: 1px solid #f5a5a5;
+    color: #a71d2a;
+}
+
+#user-profile-container {
+  width: 80%;
+  min-height: 100vh;
+  border:1px solid lightgray;
+  margin: 0 auto;
+}
+
+#user-profile-container #user-profile-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:15px;
+}
+
+#user-profile-container #user-profile-form label{
+  font-size: 1.1rem;
+}
+
+#user-profile-container #user-profile-form #profile-pic-container{
   display: flex;
   flex-direction: column;
   gap:10px;
+  margin: 15px 0;
+}
+#user-profile-container #user-profile-form #profile-picture{
+  width:200px;
+  height: auto;
+  border: 1px solid lightgrey;
+  border-radius: 8px;
 }
 
-#order-detail .order-item-container .order-item-desc p{  
-  margin:0;
+#user-profile-container #user-profile-form #username-container
+#user-profile-container #user-profile-form #email-container{
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#user-profile-container #user-profile-form #username-container label,
+#user-profile-container #user-profile-form #username-container input,
+#user-profile-container #user-profile-form #email-container label, 
+#user-profile-container #user-profile-form #email-container input{
+  font-size: 1.2rem;
+}
+#user-profile-container #user-profile-form #username-container label,
+#user-profile-container #user-profile-form #email-container label {
+  padding: 15px;
+}
+#user-profile-container #user-profile-form #username-container input,
+#user-profile-container #user-profile-form #email-container input{
+  border-radius: 8px;
+  border: 1px solid lightgrey;
+  padding:15px;
+  color:lightgrey;
+}
+#user-profile-container #user-profile-form #username-container input:focus,
+#user-profile-container #user-profile-form #email-container input:focus{
+color:black;
+}
+
+#user-profile-container #user-profile-form #save-change-btn{
+  background-color: white;
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid lightgrey;
+  transition: all 0.2s ease;
+}
+
+#user-profile-container #user-profile-form #save-change-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 2px 5px 0;
 }
 @font-face {
   font-family: "Poppins";

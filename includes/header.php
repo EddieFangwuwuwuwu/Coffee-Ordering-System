@@ -36,6 +36,7 @@ if (session_status() == PHP_SESSION_NONE) {
             <?php if (isset($_SESSION['username'])): ?>
                 <div class="user-menu">
                     <button class="user-trigger">
+                        <img class="user-avatar" src="<?= htmlspecialchars($_SESSION['user_profile'] ?? 'Images/default.jpg') ?>" alt="">
                         <?= htmlspecialchars($_SESSION['username']) ?>
                         ▾
                     </button>
