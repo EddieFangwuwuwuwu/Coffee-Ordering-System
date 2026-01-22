@@ -15,12 +15,12 @@ if (session_status() == PHP_SESSION_NONE) {
                     <li id="menu">
                         <a href="../menu.php">Menu</a>
                         <div id="dropdown">
-                            <a href="">Classic</a>
-                            <a href="">Tea</a>
-                            <a href="">Coconut Series</a>
-                            <a href="">Chocolate</a>
-                            <a href="">Kids-friendly</a>
-                            <a href="">pastries</a>
+                            <a href="menu.php?category=Classic">Classic</a>
+                            <a href="menu.php?category=Top%20Picks">Top Picks</a>
+                            <a href="menu.php?category=Coconut%20series">Coconut Series</a>
+                            <a href="menu.php?category=Chocolate%20series">Chocolate</a>
+                            <a href="menu.php?category=Tea">Tea</a>
+                            <a href="menu.php?category=Frappes">Frappe</a>
                         </div>
                     </li>
                     <li><a href="../contactUs.php">Contact us</a></li>

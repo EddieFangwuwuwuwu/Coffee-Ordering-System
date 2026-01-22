@@ -2,8 +2,19 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
-
+.admin-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.admin-layout {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
 header {
   position: sticky;
   z-index: 1000;
@@ -47,7 +58,9 @@ header section #container2 #cart {
   color: black;
   font-size: 1.2rem;
   position: relative;
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 
 header section #container2 #cart::after {
@@ -142,7 +155,9 @@ header section #container2 #login {
   color: black;
   font-size: 1.2rem;
   position: relative;
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 header section #login::after {
   content: "";
@@ -786,8 +801,12 @@ header section #container1 nav ul #menu:hover #dropdown a {
   width: 100%;
 }
 
+.page-content {
+  flex: 1;
+}
 .menuContainer {
   width: 100%;
+  height: 100vh;
   display: flex;
 }
 .categoryContainer {
@@ -809,7 +828,9 @@ header section #container1 nav ul #menu:hover #dropdown a {
   padding: 10px;
   margin-bottom: 10px;
   font-size: 1.1rem;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
   border-radius: 5px;
   margin: 5px 0;
   border: none;
@@ -829,7 +850,9 @@ header section #container1 nav ul #menu:hover #dropdown a {
   padding: 10px;
   margin-bottom: 10px;
   font-size: 1.1rem;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
   border-radius: 5px;
   margin: 5px 0;
   border: none;
@@ -1329,59 +1352,63 @@ header section #container1 nav ul #menu:hover #dropdown a {
   margin: 0;
 }
 .flash {
-    max-width: 600px;
-    margin: 15px auto;
-    padding: 12px 16px;
-    border-radius: 6px;
-    font-size: 14px;
-    line-height: 1.4;
+  max-width: 600px;
+  margin: 15px auto;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .flash-success {
-    background-color: #e6f4ea;
-    border: 1px solid #7fcf9a;
-    color: #1e7e34;
+  background-color: #e6f4ea;
+  border: 1px solid #7fcf9a;
+  color: #1e7e34;
 }
 
 .flash-error {
-    background-color: #fdecea;
-    border: 1px solid #f5a5a5;
-    color: #a71d2a;
+  background-color: #fdecea;
+  border: 1px solid #f5a5a5;
+  color: #a71d2a;
 }
 
 #user-profile-container {
   width: 80%;
   min-height: 100vh;
-  border:1px solid lightgray;
+  border: 1px solid lightgray;
   margin: 0 auto;
 }
 
-#user-profile-container #user-profile-form{
+#user-profile-container #user-profile-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:15px;
+  gap: 15px;
 }
 
-#user-profile-container #user-profile-form label{
+#user-profile-container #user-profile-form label {
   font-size: 1.1rem;
 }
 
-#user-profile-container #user-profile-form #profile-pic-container{
+#user-profile-container #user-profile-form #profile-pic-container {
   display: flex;
   flex-direction: column;
-  gap:10px;
+  gap: 10px;
   margin: 15px 0;
 }
-#user-profile-container #user-profile-form #profile-picture{
-  width:200px;
+#user-profile-container #user-profile-form #profile-picture {
+  width: 200px;
   height: auto;
   border: 1px solid lightgrey;
   border-radius: 8px;
 }
 
-#user-profile-container #user-profile-form #username-container
-#user-profile-container #user-profile-form #email-container{
+#user-profile-container
+  #user-profile-form
+  #username-container
+  #user-profile-container
+  #user-profile-form
+  #email-container {
   width: 50%;
   margin: 0 auto;
   display: flex;
@@ -1390,8 +1417,8 @@ header section #container1 nav ul #menu:hover #dropdown a {
 
 #user-profile-container #user-profile-form #username-container label,
 #user-profile-container #user-profile-form #username-container input,
-#user-profile-container #user-profile-form #email-container label, 
-#user-profile-container #user-profile-form #email-container input{
+#user-profile-container #user-profile-form #email-container label,
+#user-profile-container #user-profile-form #email-container input {
   font-size: 1.2rem;
 }
 #user-profile-container #user-profile-form #username-container label,
@@ -1399,18 +1426,18 @@ header section #container1 nav ul #menu:hover #dropdown a {
   padding: 15px;
 }
 #user-profile-container #user-profile-form #username-container input,
-#user-profile-container #user-profile-form #email-container input{
+#user-profile-container #user-profile-form #email-container input {
   border-radius: 8px;
   border: 1px solid lightgrey;
-  padding:15px;
-  color:lightgrey;
+  padding: 15px;
+  color: lightgrey;
 }
 #user-profile-container #user-profile-form #username-container input:focus,
-#user-profile-container #user-profile-form #email-container input:focus{
-color:black;
+#user-profile-container #user-profile-form #email-container input:focus {
+  color: black;
 }
 
-#user-profile-container #user-profile-form #save-change-btn{
+#user-profile-container #user-profile-form #save-change-btn {
   background-color: white;
   padding: 15px;
   font-size: 1.2rem;
@@ -1420,9 +1447,145 @@ color:black;
   transition: all 0.2s ease;
 }
 
-#user-profile-container #user-profile-form #save-change-btn:hover{
+#user-profile-container #user-profile-form #save-change-btn:hover {
   transform: translateY(-2px);
   box-shadow: 2px 5px 0;
+}
+
+/*ADMIN-PAGES CSS */
+.admin-page {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+#admin-sidebar {
+  width: 20%;
+  height: 100vh;
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+#admin-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+#admin-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+#admin-sidebar ul li {
+  width: 100%;
+  text-align: center;
+  margin: 15px 0;
+}
+
+#admin-sidebar ul li .admin-sidebar-element {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  padding: 10px;
+  display: block;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+#admin-sidebar ul li .admin-sidebar-element.active {
+  background-color: rgb(98, 97, 97);
+  color: white;
+  border-radius: 5px;
+}
+
+#admin-sidebar ul li .admin-sidebar-element:hover {
+  background-color: rgb(180, 78, 5);
+  color: white;
+  border-radius: 5px;
+}
+
+.admin-page-content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+#admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 1px solid lightgrey;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#admin-setting {
+  position: relative;
+}
+
+#admin-setting #admin-trigger {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#admin-setting #admin-trigger #admin-profile {
+  width: 28px;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#admin-setting #admin-dropdown {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  background-color: beige;
+  box-shadow: 2px 5px 5px lightgrey;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#admin-setting #admin-dropdown a,
+#admin-setting #admin-dropdown button {
+  text-decoration:none;
+  color:black;
+  display: block;
+  background-color: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 14px;
+  text-align: left;
+
+  font-family: "Poppins", sans-serif; /* force Poppins */
+  font-weight: 400;
+}
+
+#admin-setting #admin-dropdown button{
+  font-size: 15px;
+  background-color: beige;
+}
+
+#admin-setting #admin-dropdown a:hover,
+#admin-setting #admin-dropdown button:hover {
+  background-color: rgb(180, 78, 5);
+  color:white;
+}
+
+#admin-setting:hover #admin-dropdown {
+  display: block;
 }
 @font-face {
   font-family: "Poppins";
