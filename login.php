@@ -30,7 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
                     $_SESSION['username'] = $user['user_name'];
                     $_SESSION['user_profile'] = $user['user_profile'];
                     $_SESSION['user-role'] = $user['role'];
-                    
                     // set condition for user and admin login
                     // user redirected to homepage while admin redirected to dashboard
                     if($_SESSION['user-role'] === "user"){

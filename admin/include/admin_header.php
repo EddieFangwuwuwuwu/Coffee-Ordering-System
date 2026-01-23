@@ -2,19 +2,15 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-
-include('../database.php');
-include('admin_guard.php'); // blocks non-admins
+require_once __DIR__ . '/../admin_guard.php';// blocks non-admins
 ?>
 
 <header id="admin-header">
     <p>Welcome, <?= htmlspecialchars($_SESSION['username']) ?></p>
     <div id="admin-info">
-        <img src="" alt="">
-
         <div id="admin-setting">
             <button id="admin-trigger">
-                <img src="<?= htmlspecialchars($_SESSION['user_profile'] ?? '../../Images/default.jpg') ?>" alt="admin-profile" id="admin-profile">
+                <img src="<?= htmlspecialchars('../../' . ($_SESSION['user_profile'] ?? '../../Images/default.jpg')) ?>" alt="admin-profile" id="admin-profile">
                 ▾</button>
             <div id="admin-dropdown">
                 <a href="../../profile.php">Profile</a>

@@ -95,7 +95,11 @@ if (isset($_POST['saveChange'])) {
 </head>
 
 <body>
-    <?php require('includes/header.php') ?>
+    <?php if($_SESSION['user-role'] === 'admin'):?>
+        <?php require('admin/include/admin_header.php') ?>
+    <?php else: ?>
+        <?php require('includes/header.php') ?>
+    <?php endif ?>
     <?php if (isset($_SESSION['flash_success'])): ?>
         <div class="flash flash-success">
             <p><?= htmlspecialchars($_SESSION['flash_success']) ?></p>
@@ -126,8 +130,13 @@ if (isset($_POST['saveChange'])) {
             </div>
             <input type="submit" value="Save Change" name="saveChange" id="save-change-btn">
         </form>
+        <form action="./admin/admin_dashboard.php" method="post">
+            <input type="submit" value="Back to Dashboard" id="back-dashboard-btn">
+        </form>
     </div>
-    <?php require('includes/footer.php') ?>
+    <?php if($_SESSION['user-role'] === 'user'): ?>
+        <?php require('includes/footer.php') ?>
+    <?php endif; ?>
 </body>
 
 </html>
